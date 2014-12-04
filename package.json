@@ -1,0 +1,24 @@
+{
+  "name": "<your unique(!) app name>",
+  "description": "<app description>",
+  "version": "0.0.1",
+  "contributors": [
+    {
+      "name": "<your name>",
+      "email": "<your email>"
+    }
+  ],
+  "engine": [
+    "node >= 0.8"
+  ],
+  "yahoo": {
+    "bugzilla": {
+      "product": "<your bugzilla product>",
+      "component": "<your bugzilla component>"
+    },
+    "custodian": {
+      "email": "<your custodian email>",
+      "url": "<url to your project>"
+    }
+  }
+}
