@@ -1,11 +1,11 @@
 {
-  "name": "<your unique(!) app name>",
-  "description": "<app description>",
+  "name":  "BunchOfLearnNode",
+  "description": "Learn node files ",
   "version": "0.0.1",
   "contributors": [
     {
-      "name": "<your name>",
-      "email": "<your email>"
+      "name": "veeru",
+      "email": "veeru@yahoo-inc.com"
     }
   ],
   "engine": [
@@ -13,11 +13,11 @@
   ],
   "yahoo": {
     "bugzilla": {
-      "product": "<your bugzilla product>",
-      "component": "<your bugzilla component>"
+      "product": "messenger",
+      "component": "Ops"
     },
     "custodian": {
-      "email": "<your custodian email>",
+      "email": "veeru@yahoo-inc.com",
       "url": "<url to your project>"
     }
   }
