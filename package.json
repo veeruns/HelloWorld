@@ -12,7 +12,7 @@
     "node >= 0.8"
   ],
  "dependencies": {
-    "node-zookeeper-client": "0.2.2",
+    "node-zookeeper-client": "0.2.2"
   },
   "yahoo": {
     "bugzilla": {
