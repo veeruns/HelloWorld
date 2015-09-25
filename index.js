@@ -9,7 +9,14 @@ http.createServer(function(request, response) {
     response.setHeader('Content-Type', 'text/html; charset=utf-8');
     client.connect();
     client.once('connected', function () {
-       response.write('Connected to ZooKeeper.');
+       console.log('Connected to ZooKeeper.');
+       client.getChildren(path,function(error,children,stat){
+	 if(error){
+		console.log("Error Zookeeper");
+	 }
+	 response.write(children);
+       });
+
     });
     response.end();	
 
