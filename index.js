@@ -1,7 +1,7 @@
 var http = require('http');
 var zookeeper = require('node-zookeeper-client');
 var client = zookeeper.createClient('zk101.iris.ne1.yahoo.com:2181');
-var path = '/hyperion/prod/services/servicePool';
+var path = '/prod/services';
 
 http.createServer(function(request, response) {
 
