@@ -10,9 +10,6 @@ http.createServer(function(request, response) {
     client.connect();
     client.once('connected', function () {
        response.write('Connected to ZooKeeper.');
-       var data=listChildren(client, path);
-       var i=0;
-       response.write("data</br>");
     });
     response.end();	
 
