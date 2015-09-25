@@ -12,7 +12,7 @@ http.createServer(function(request, response) {
        response.write('Connected to ZooKeeper.');
        var data=listChildren(client, path);
        var i=0;
-       reponse.write("data</br>");
+       response.write("data</br>");
     });
     response.end();	
 
