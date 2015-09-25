@@ -7,16 +7,13 @@ http.createServer(function(request, response) {
 
     response.setHeader('Connection', 'Transfer-Encoding');
     response.setHeader('Content-Type', 'text/html; charset=utf-8');
-    response.setHeader('Transfer-Encoding', 'chunked');
-
-    response.write('hello');
-
-    setTimeout(function() {
-        response.write(' world!');
-        response.end();
-    }, 10000);
+    client.connect();
+    response.write('hello world\n');
+    client.once('connected', function () {
+       response.write('Connected to ZooKeeper.');
+       listChildren(client, path);
+    });
 	
-client.connect();
 
 }).listen(80);
 
@@ -31,7 +28,7 @@ function listChildren(client, path) {
         },
         function (error, children, stat) {
             if (error) {
-                console.log(
+                  response.write(
                     'Failed to list children of %s due to: %s.',
                     path,
                     error
@@ -44,8 +41,4 @@ function listChildren(client, path) {
     );
 }
 
-client.once('connected', function () {
-    response.write('Connected to ZooKeeper.');
-    listChildren(client, path);
-});
 
