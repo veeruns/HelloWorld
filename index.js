@@ -18,7 +18,7 @@ http.createServer(function(request, response) {
 
 
 
-function listChildren(client, path) {
+function listChildren(client, path,response) {
     client.getChildren(
         path,
         function (error, children, stat) {
