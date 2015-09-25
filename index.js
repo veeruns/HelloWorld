@@ -10,7 +10,7 @@ http.createServer(function(request, response) {
     client.connect();
     client.once('connected', function () {
        response.write('Connected to ZooKeeper.');
-       listChildren(client, path);
+       listChildren(client, path,response);
     });
     response.end();	
 
@@ -30,7 +30,8 @@ function listChildren(client, path) {
                 );
                 return;
             }
-            console.log('Children of %s are: %j.', path, children);
+            response.write('Children of %s are: %j.', path, children);
+		
         }
     );
 }
