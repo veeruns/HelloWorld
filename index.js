@@ -22,21 +22,16 @@ http.createServer(function(request, response) {
 function listChildren(client, path) {
     client.getChildren(
         path,
-        function (event) {
-            response.write('Got watcher event: %s', event);
-            listChildren(client, path);
-        },
         function (error, children, stat) {
             if (error) {
-                  response.write(
+                  console.log(
                     'Failed to list children of %s due to: %s.',
                     path,
                     error
                 );
                 return;
             }
-
-            response.write('Children of %s are: %j.', path, children);
+            console.log('Children of %s are: %j.', path, children);
         }
     );
 }
