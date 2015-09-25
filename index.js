@@ -8,12 +8,11 @@ http.createServer(function(request, response) {
     response.setHeader('Connection', 'Transfer-Encoding');
     response.setHeader('Content-Type', 'text/html; charset=utf-8');
     client.connect();
-    response.write('hello world\n');
     client.once('connected', function () {
        response.write('Connected to ZooKeeper.');
        listChildren(client, path);
     });
-	
+    response.end();	
 
 }).listen(80);
 
