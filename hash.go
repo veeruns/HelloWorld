@@ -1,0 +1,13 @@
+package main
+import ( "fmt" )
+
+func main() {
+
+  hash := make(map[string]int)
+  hash["t1"]=5
+  hash["t2"]=6
+  hash["t3"]=7
+  for k,v := range hash {
+    fmt.Printf("%s,%d\n",k,v)
+  }
+}
