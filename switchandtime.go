@@ -13,13 +13,15 @@ func WhatDay()string {
       return "Weekday"
   }
 }
-
+//Whatami returns type of the
 func Whatami(i interface{}) string{
-  switch t:=i.(type) {
+  switch i.(type) {
   case string:
       return "string"
-  case int32,int64:
-      return "Integer"
+  case int32,int64,int:
+      return "integer"
+  case bool:
+      return "Boolean"
   default:
       return "UnknownType"
   }
