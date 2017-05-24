@@ -1,8 +1,6 @@
 package helloworld
 
-import (
- "fmt"
-)
+
 type Employee struct {
   firstname string
   lastname string
@@ -14,7 +12,5 @@ type Address struct {
   City string
   State string
   zipcode string
-  func PrintAddress () {
-    fmt.Printf("%s,%s\n%s\n",Street,City,zipcode)
-  }
+
 }
