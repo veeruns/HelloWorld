@@ -5,12 +5,13 @@ import (
 "fmt"
 "flag"
 )
-var Options struct {
+type Option struct {
   Logfile string
   Loglevel string
   Concurrency int
   Timeout int
 }
+var Options Option
 /*
 var Logfile string
 var Loglevel string

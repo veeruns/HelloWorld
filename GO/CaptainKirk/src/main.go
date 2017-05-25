@@ -28,9 +28,9 @@ func main() {
 	helloworld.Circlestuff()
 	helloworld.PrintRandom()
 	codekata.Flagoperation()
-	var stuff string
-	stuff = codekata.Logfile
-	timeout := codekata.Timeout
-	fmt.Printf("Log file name is %s\n", stuff)
+	stuff := codekata.Options
+
+	timeout := stuff.Timeout
+	fmt.Printf("Log file name is %s\n", stuff.Logfile)
 	fmt.Printf("Timeout value is %d\n", timeout)
 }
