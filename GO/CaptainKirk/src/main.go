@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/veeruns/codekata"
 	"github.com/veeruns/helloworld"
 )
 
@@ -26,5 +27,9 @@ func main() {
 	fmt.Printf("Addition is %d\n", num)
 	helloworld.Circlestuff()
 	helloworld.PrintRandom()
+	codekata.Flagoperation()
+	var stuff string
+	stuff = codekata.Logfile
+	fmt.Printf("Log file name is %s\n", stuff)
 
 }
