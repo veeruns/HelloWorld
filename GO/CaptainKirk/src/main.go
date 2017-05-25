@@ -30,6 +30,7 @@ func main() {
 	codekata.Flagoperation()
 	var stuff string
 	stuff = codekata.Logfile
+	timeout := codekata.Timeout
 	fmt.Printf("Log file name is %s\n", stuff)
-
+	fmt.Printf("Timeout value is %d\n", timeout)
 }
