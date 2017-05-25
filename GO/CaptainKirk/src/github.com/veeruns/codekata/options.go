@@ -5,7 +5,7 @@ import (
 "fmt"
 "flag"
 )
-type struct Options {
+type  Options struct {
   var logfile string
   var loglevel string
   var concurrency int
