@@ -6,10 +6,10 @@ import (
 "flag"
 )
 type  Options struct {
-  var logfile string
-  var loglevel string
-  var concurrency int
-  var timeout int
+  logfile string
+  loglevel string
+  concurrency int
+  timeout int
 }
 /*
 var Logfile string
